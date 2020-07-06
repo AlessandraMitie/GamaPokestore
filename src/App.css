@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    min-width: 100%;
+}
+
+body {
+    background-color: rgb(225, 228, 227);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
