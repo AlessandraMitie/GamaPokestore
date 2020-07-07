@@ -3,9 +3,7 @@ import './styles.css';
 
 function Product(props){
     const { id, name, image,types, price  } = props.pokemon;
-    function addCar(){
-        console.log('vacilona')
-    }  
+   
       return(
         <div onClick={() => addCar(props.pokemon)}>
               <ul className="list-pokemon">
