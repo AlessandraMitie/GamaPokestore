@@ -2,14 +2,20 @@ import React from 'react';
 import './styles.css';
 
 function Product(props){
-    const { id, name, type, price } = props.pokemon;
-
-    return(
+    const { id, name, image,types, price  } = props.pokemon;
+    function addCar(){
+        console.log('vacilona')
+    }  
+      return(
         <div onClick={() => addCar(props.pokemon)}>
-            <div>
-                {name}
-                {id}
-            </div>
+              <ul className="list-pokemon">
+                <li className="cards" type={types}>
+                <label>{types}</label>
+                <p>{name}</p>
+                <img className="fit-picture" src={image} alt={name} />
+                <span className="price">Price: {price}</span>
+                </li>
+            </ul>
         </div>
     );
 };
