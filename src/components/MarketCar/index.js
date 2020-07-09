@@ -25,10 +25,3 @@ function MarketCar(props) {
 };
 
 export default MarketCar;
-
-
- 
-
-const list = carContent.map( lista => (
-    lista*3;
-))
