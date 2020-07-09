@@ -2,12 +2,14 @@ import React from 'react';
 import './styles.css';
 
 function Product(props){
-    const { id, name, image,types, price  } = props.pokemon;
+    
+    const { addCar, pokemon } = props;
+    const { id, name, image, types, price } = pokemon;
    
       return(
-        <div onClick={() => addCar(props.pokemon)}>
-              <ul className="list-pokemon">
-                <li className="cards" type={types}>
+        <div className="product-container">
+            <ul className="list-pokemon">
+                <li className="cards" type={types} onClick={() => addCar(pokemon)}>
                 <label>{types}</label>
                 <p>{name}</p>
                 <img className="fit-picture" src={image} alt={name} />
@@ -17,6 +19,5 @@ function Product(props){
         </div>
     );
 };
-
 
 export default Product;

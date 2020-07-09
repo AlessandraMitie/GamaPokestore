@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../../components/Product';
 import MarketCar from '../../components/MarketCar';
-import api from '../../services/api'
+import api from '../../services/api';
 
 function Home(props) {
     const [carContent, setCarContent] = useState([]);
@@ -41,7 +41,7 @@ function Home(props) {
     }, []);
 
 
-    function addCar(pokemon) {
+    const addCar = (pokemon) => {
         setCarContent([...carContent, pokemon]);
     }
 

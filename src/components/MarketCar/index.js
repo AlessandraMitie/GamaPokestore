@@ -2,6 +2,11 @@ import React from 'react';
 
 function MarketCar(props) {
     const {carContent} = props;
+    let total = 0;
+    for (let x=0; x < carContent.length; x++) {
+        total += carContent[x].price;
+        console.log(carContent[x].price);
+    }
 
     return(
         <div>
@@ -13,10 +18,17 @@ function MarketCar(props) {
                 ))}
             </div>
             <div>
-                Total {carContent.reduce((a,b) => { return (a+b.value) }, 0 )} 
+                Total {total}
             </div>
         </div>
     );
 };
 
 export default MarketCar;
+
+
+ 
+
+const list = carContent.map( lista => (
+    lista*3;
+))
